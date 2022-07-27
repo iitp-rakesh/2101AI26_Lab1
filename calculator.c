@@ -9,6 +9,11 @@ float substract(float a, float b)
 {
     return a - b;
 }
+// Multiply functions
+float multiply(float a, float b)
+{
+    return a * b;
+}
 int main(){
     float num1,num2,result;
     char op;
@@ -26,6 +31,10 @@ int main(){
         case '-': 
                 result = substract(num1,num2);
                 printf("%.2f - %.2f = %.2f\n",num1,num2,result);
+                break;
+        case '*':
+                result = multiply(num1,num2);
+                printf("%.2f * %.2f = %.2f\n",num1,num2,result);
                 break;
     }
     return 0;
