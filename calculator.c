@@ -4,7 +4,11 @@ float add(float a, float b)
 {
     return a + b;
 }
-
+// Substract function
+float substract(float a, float b)
+{
+    return a - b;
+}
 int main(){
     float num1,num2,result;
     char op;
@@ -19,6 +23,10 @@ int main(){
             result = add(num1,num2);
             printf("%.2f + %.2f = %.2f\n",num1,num2,result);
             break;
+        case '-': 
+                result = substract(num1,num2);
+                printf("%.2f - %.2f = %.2f\n",num1,num2,result);
+                break;
     }
     return 0;
 }
