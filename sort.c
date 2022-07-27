@@ -16,6 +16,22 @@ void bubbleSort(int arr[], int n)
         }
     }
 }
+//Selection Sort Function
+void selectionSort(int arr[], int n){
+    int i, j, temp,index;
+    for (i = 0; i < n-1; i++){
+        int min= arr[i];
+        for (j = i; j < n; j++){
+            if (min>arr[j]){
+                min= arr[j];
+                index= j;
+            }
+        }
+        temp = arr[index];
+        arr[index] = arr[i];
+        arr[i] = temp;
+    }
+}
 int main(){
     int size;
     printf("Enter the size of the array: ");
@@ -33,7 +49,9 @@ int main(){
     case 1:
         bubbleSort(array,size);
         break;
-    
+    case 2:
+        selectionSort(array,size);
+        break;
     default:
         break;
     }
