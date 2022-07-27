@@ -103,7 +103,8 @@ void mergeSort(int arr[], int l, int r)
         merge(arr, l, m, r);
     }
 }
-
+//Quicksort Function
+void quicksort(int arr[], int first, int last)
 {
     int i, j, pivot, temp;
     if (first < last)
@@ -159,7 +160,9 @@ int main()
     case 4:
         mergeSort(array, 0, size - 1);
         break;
-   
+    case 5:
+        quicksort(array,0,size-1);
+        break;
      default:    
         printf("Invalid choice\n");
         break;
