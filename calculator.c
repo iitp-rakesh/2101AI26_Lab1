@@ -14,6 +14,11 @@ float multiply(float a, float b)
 {
     return a * b;
 }
+//Divide Function 
+float divide(float a, float b)
+{
+    return a / b;
+}
 int main(){
     float num1,num2,result;
     char op;
@@ -35,6 +40,13 @@ int main(){
         case '*':
                 result = multiply(num1,num2);
                 printf("%.2f * %.2f = %.2f\n",num1,num2,result);
+                break;
+        case '/':
+                result = divide(num1,num2);
+                printf("%.2f / %.2f = %.2f\n",num1,num2,result);
+                break;
+        default:
+                printf("Invalid operator\n");
                 break;
     }
     return 0;
